@@ -26,13 +26,15 @@ var sb = require("./sandbox.js");
     function match(numbers) {
         var cow = 0,
             bull = 0;
-        console.log(generator());
+       
+        var gen = generator();
+         console.log(gen);
         for (var i = 0; i < numbers.toString().length; i++) {
-            if (numbers.toString()[i] == generator()[i]){
+            if (numbers.toString()[i] == gen[i]){
                 cow++;
                 
             }else{
-                generator().forEach(function(element) {
+                gen.forEach(function(element) {
                     if (element == numbers.toString()[i]) {
                         bull++;                        
                     }
