@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cows AND Bulls</title>
+        <link rel="stylesheet" type="text/css" href="style/styles.css">
+    </head>
+    <body>
+        <div>
+            <form action="" id="game" class="module">
+                <p>Enter Your Lucky Numbers: <input type="text" class="playerNumber" name="playerNumber" placeholder="4 digits"></p>
+                <input type="submit" value="PLAY" class="submit">
+            </form>
+            <div id="board">
+                <div class="game">Play Again</div>
+                <ul id="outcome"></ul>
+            </div>
+        </div>
+    <script type="text/javascript" src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        System.config({
+            meta: {
+                format: "cjs"
+            }
+        })
+
+        SystemJS.import("js/app.js");
+    </script>    
+    </body>
+</html>
