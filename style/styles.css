@@ -6,7 +6,7 @@
 body {
 	font-family: "Georgia";
 	font-size: 16px;
-	background-color: #444;
+	background-image: url("/images/bullsandcows.jpg");
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -18,12 +18,12 @@ body {
 }
 
 #game {
-	position: absolute;
+	position: relative;
 	display: table;
 	box-sizing: border-box;
 	padding: 54px 54px;
 	top: 20vh;
-	background-color: #f3f3f3;
+	background-color: #cae4d4;
 	border-radius: 3px;
 	opacity: 0;
 	pointer-events: none;
@@ -31,6 +31,7 @@ body {
 	-moz-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
+	color: cornflowerblue 
 }
 
 #game .header {
@@ -55,16 +56,18 @@ body {
 	box-shadow: none;
 	width: 80%;
 	margin: 10px 10px 10px 20px;
+	background-color: rgb(18, 170, 31);
+	border-radius: 10px;
+	color: blanchedalmond	
 }
 
 #board {
-	position: absolute;
+	position: relative;
 	box-sizing: border-box;
 	border-radius: 3px;
-	width: 50%;
-	background-color: #f3f3f3;
-	height: 82vh;
-	top: 9vh;
+	background-color: #cae4d4;
+	height: 50vh;
+	bottom: 20vh;
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transition: all 0.3s ease-out;
@@ -84,15 +87,42 @@ body {
 	overflow-x: hidden;
 }
 
-.contact {
-	position: relative;
-	width: 54%;
-	box-sizing: border-box;
-	padding: 24px;
-	background-color: white;
-	box-shadow: 0px 2px 6px rgba(0,0,0,.2);
-	margin-bottom: 24px;
+#outcome li {
+	color: rgb(92, 7, 7);
+	-webkit-animation: fadeIn 10s;
+	animation: fadeIn 10s;
+	font-size: 40px;
+	font-style: oblique;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	text-align: center;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	margin-left: -130px;
+	margin-top: 120px;
+	text-decoration: crimson;
+
 }
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 
 #board .game {
 	cursor: pointer;
@@ -100,11 +130,12 @@ body {
 	right: 34px;
 	top: 34px;
 	display: block;
-	color: inherit;
+	color: blanchedalmond;
 	padding: 18px;
 	width: 150px;
-	background-color: #888;
+	background-color: rgb(18, 170, 31);
 	font-size: 18px;
 	text-decoration: none;
 	z-index: 20;
+	border-radius: 10px;
 }

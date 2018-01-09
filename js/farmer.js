@@ -10,7 +10,7 @@ var sb = require("./sandbox.js");
 
         $on(play, "click", gameOutCome);
 
-       // sb.listen({"closeBoard": showGame}, id);
+        sb.listen({"closeBoard": showGame}, id);
     }
 
     function generator() {
@@ -58,13 +58,14 @@ var sb = require("./sandbox.js");
             data: outCome
         });
 
-        parent.classList.toggle("module-active");
+        parent.classList.toggle("module");
 
         e.preventDefault();
     }
 
     function showGame() {
-        parent.classList.toggle("module-active");
+        parent.classList.toggle("module");
+        location.reload();
     }
 
     

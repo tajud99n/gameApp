@@ -3,7 +3,6 @@
     var modules = {};
 
     function addModule(module_id, mod) {
-        console.log(modules);
         modules[module_id] = mod;
     }
 

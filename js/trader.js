@@ -12,6 +12,7 @@ var sb = require("./sandbox.js");
         sb.listen({ "gameAction": showOutCome}, id);
 
         $on(play, "click", closeBoard);
+
     }
 
     function showOutCome(actionOutcome) {
@@ -25,7 +26,7 @@ var sb = require("./sandbox.js");
 
         list.appendChild(li);
 
-        parent.classList.toggle("module-active");
+        parent.classList.toggle("module");
     }
 
     function closeBoard(e) {
@@ -34,7 +35,7 @@ var sb = require("./sandbox.js");
             data: null
         });
 
-        parent.classList.toggle("module-active");
+        parent.classList.toggle("module");
 
         e.preventDefault();
     }
@@ -43,3 +44,4 @@ var sb = require("./sandbox.js");
         module.exports.init = init;
         module.exports.showOutCome = showOutCome;
         module.exports.closeBoard = closeBoard; 
+
